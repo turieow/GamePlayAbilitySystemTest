@@ -61,12 +61,12 @@ void UGPAAttributeSet::PostGameplayEffectExecute(const FGameplayEffectModCallbac
 	// 受け取ったデータからターゲットアクター、コントローラ、キャラクタの取得
 	AActor* TargetActor = nullptr;
 	AController* TargetController = nullptr;
-	AGPACharacter* TargetCharacter = nullptr;
+	AGAS_Character* TargetCharacter = nullptr;
 	if (Data.Target.AbilityActorInfo.IsValid() && Data.Target.AbilityActorInfo->AvatarActor.IsValid())
 	{
 		TargetActor = Data.Target.AbilityActorInfo->AvatarActor.Get();
 		TargetController = Data.Target.AbilityActorInfo->PlayerController.Get();
-		TargetCharacter = Cast<AGPACharacter>(TargetActor);
+		TargetCharacter = Cast<AGAS_Character>(TargetActor);
 	}
 
 	// 受け取ったデータがMaxSpeedだった場合にCharacter側の最大移動スピードに反映させる
