@@ -10,6 +10,7 @@ AGAS_Character::AGAS_Character()
 
 	// create the attribute set
 	AttributeSet = CreateDefaultSubobject<UGPAAttributeSet>(TEXT("AttributeSet"));
+
 }
 
 
